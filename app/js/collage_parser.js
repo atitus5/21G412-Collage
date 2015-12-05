@@ -11,6 +11,20 @@
     });
   });
 
+  var popovers = [];
+  var hideAllPopovers = function() {
+    $.each(popovers, function(idx, el) {
+      el.popover("hide");
+    });
+    popovers = [];
+  }
+
+  var openPopover = function() {
+    hideAllPopovers();
+    $(this).popover("show");
+    popovers.push($(this));
+  }
+
   var collageDiv = new Promise(function(done, reject) {
     rawXML.done(function(xml) {
       $div = $("<div class='collage'>");
@@ -23,8 +37,19 @@
           $lineView = $("<div class='line'>");
           $.each($lineModel.find("word"), function(wIdx, word) {
             $wordModel = $(word);
-            $wordView = $("<span class='word'>").text($wordModel.attr("display"));
-            if ($wordModel.attr("key") == "true") {
+            $wordView = $("<span class='word'>").text($wordModel.attr("display"))
+                                                .attr("page", $wordModel.attr("page"))
+                                                .attr("line", $wordModel.attr("line"));
+            var isKeyword = ($wordModel.attr("key") == "true");
+            if (isKeyword) {
+              $wordView.popover({ 
+                title: "S. " + $wordModel.attr("page") + " Z. " + $wordModel.attr("line"), 
+                content: $wordModel.text(),
+                html: true,
+                placement: "top",
+                trigger: "manual"
+              });
+              $wordView.hover(openPopover, function() {});
               $wordView.addClass("key");
             }
             $lineView.append($wordView);

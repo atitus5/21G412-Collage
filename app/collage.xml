@@ -5,7 +5,7 @@
       <line>
         <word page="" line="" display="In" key="false"></word>
         <word page="" line="" display="der" key="false"></word>
-        <word id="wanne" page="" line=""  display="Wanne" key="true"></word>
+        <word id="wanne" page="" line=""  display="Wanne" key="true"><![CDATA[<a href="http://www.google.com">Hallo, Welt!</a>]]></word>
       </line>
       <line>
         <word page="" line="" display="saßen" key="true"></word>
