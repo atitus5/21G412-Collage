@@ -13,20 +13,30 @@
 
 /* Custom */
 
-.body {
-  font-family: "Helvetica Neue Light", "Verdana", "Arial", sans-serif;
+html {
+  min-height:100%;
+  position:relative;
+}
+
+body {
+  font-family: "Helvetica Neue", "Verdana", "Arial", sans-serif;
   font-weight: 200;
   font-size: 16px;
+  height:100%; 
 }
 
 .word {
   font-size: 20px;
-  font-weight: 200;
   color: #333;
   display: inline;
   background: url('../seamless_paper_texture/seamless_paper_texture.png');
   padding: 2px;
   margin: 2px;
+  cursor: default;
+}
+
+.word.key {
+  cursor: pointer;
 }
 
 .line {

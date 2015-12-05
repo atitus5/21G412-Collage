@@ -24,6 +24,9 @@
           $.each($lineModel.find("word"), function(wIdx, word) {
             $wordModel = $(word);
             $wordView = $("<span class='word'>").text($wordModel.attr("display"));
+            if ($wordModel.attr("key") == "true") {
+              $wordView.addClass("key");
+            }
             $lineView.append($wordView);
             $lineView.append(" ");
           });
@@ -37,7 +40,9 @@
 
   var addDiv = function() {
     collageDiv.done(function(div) {
+      $(div).fadeOut(0);
       $(".collage-container").append(div);
+      $(div).fadeIn(2000);
     }, function(err) {
       console.error(err);
     });
