@@ -15,10 +15,20 @@
     rawXML.done(function(xml) {
       $div = $("<div class='collage'>");
       $xml = $(xml);
-      console.log($xml);
-      $.each($xml.find("word"), function(idx, el) {
-        $el = $(el);
-        $div.append($("<span class='word'>").text($el.attr("display")));
+      $.each($xml.find("stanza"), function(idx, stanza) {
+        $stanzaModel = $(stanza);
+        $stanzaView = $("<div class='stanza'>");
+        $.each($stanzaModel.find("line"), function(lIdx, line) {
+          $lineModel = $(line);
+          $lineView = $("<div class='line'>");
+          $.each($lineModel.find("word"), function(wIdx, word) {
+            $wordModel = $(word);
+            $wordView = $("<span class='word'>").text($wordModel.attr("display"));
+            $lineView.append($wordView);
+          });
+          $stanzaView.append($lineView);
+        });
+        $div.append($stanzaView);
       });
       done($div);
     }, reject);
