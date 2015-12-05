@@ -1,5 +1,5 @@
-DOCKER_IMG="kkleidal/21G412Collage"
-CONTAINER_NAME="21G412Collage"
+DOCKER_IMG=kkleidal/german-collage
+CONTAINER_NAME="german-collage-container"
 
 CID := $(shell cat run 2>/dev/null)
 

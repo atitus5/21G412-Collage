@@ -14,7 +14,9 @@
   var collageDiv = new Promise(function(done, reject) {
     rawXML.done(function(xml) {
       $div = $("<div class='collage'>");
-      $.each(xml.find("word"), function(idx, el) {
+      $xml = $(xml);
+      console.log($xml);
+      $.each($xml.find("word"), function(idx, el) {
         $el = $(el);
         $div.append($("<span class='word'>").text($el.attr("display")));
       });
