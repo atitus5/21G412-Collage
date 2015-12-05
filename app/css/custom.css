@@ -12,3 +12,25 @@
 }
 
 /* Custom */
+
+.body {
+  font-family: "Helvetica Neue Light", "Verdana", "Arial", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.word {
+  font-size: 20px;
+  font-weight: 200;
+  display: inline;
+}
+
+.line {
+  width: 400px;
+  text-align: left;
+  margin: auto;
+}
+
+.stanza {
+  margin-bottom: 20px;
+}

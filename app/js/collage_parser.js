@@ -25,6 +25,7 @@
             $wordModel = $(word);
             $wordView = $("<span class='word'>").text($wordModel.attr("display"));
             $lineView.append($wordView);
+            $lineView.append(" ");
           });
           $stanzaView.append($lineView);
         });
