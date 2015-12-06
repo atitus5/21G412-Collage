@@ -9,7 +9,7 @@
       </line>
       <line>
         <word id="sassen" page="" line="" display="saßen" key="true"></word>
-        <word page="" line="" display="wir" key="false"></word>
+        <word id="wir" page="" line="" display="wir" key="true"></word>
       </line>
       <line>
         <word id="einsam" page="" line="" display="einsam" key="true"></word>
@@ -38,18 +38,18 @@
       <line>
         <word page="" line="" display="das" key="false"></word>
         <word id="Wasser" page="" line="" display="Wasser" key="true"></word>
-        <word page="" line="" display="war" key="false"></word>
+        <word id="war" page="" line="" display="war" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
     </stanza>
     <stanza>
       <line>
-        <word id="prasselnder" page="" line="" display="Prasselnder" key="true"></word>
+        <word id="Prasselnder" page="" line="" display="Prasselnder" key="true"></word>
         <word id="Regen" page="73" line="24" display="Regen" key="true"></word>
         <word page="" line=""  display="." key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="Jetzt" key="true"></word>
+        <word id="Jetzt" page="" line="" display="Jetzt" key="true"></word>
         <word id="stehe" page="" line="" display="stehe" key="true"></word>
         <word page="" line="" display="ich" key="false"></word>
         <word id="draussen" page="" line="" display="draußen" key="true"></word>
@@ -68,8 +68,8 @@
       </line>
       <line>
         <word page="" line="" display="mein" key="false"></word>
-        <word page="" line="" display="Gesicht" key="true"></word>
-        <word page="" line="" display="sauberzuspülen" key="true"></word>
+        <word id="Gesicht" page="" line="" display="Gesicht" key="true"></word>
+        <word id="sauberzuspülen" page="" line="" display="sauberzuspülen" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
       <line>
@@ -116,12 +116,35 @@
     </stanza>
   </content>
   <connections>
-    <edge from-id="Wasser" to-id="Wanne" two-way="true" />
-    <edge from-id="Wasser" to-id="Regen" two-way="true" />
-    <edge from-id="Regen" to-id="Donner" two-way="true" />
-    <edge from-id="Wasser" to-id="Wasser2" two-way="true" />
+    <edge from-id="Wanne" to-id="ertrinkend" two-way="true" />
+    <edge from-id="Wanne" to-id="Wasser" two-way="true" />
+    <edge from-id="Wanne" to-id="Wasser2" two-way="true" />
+    <edge from-id="Wanne" to-id="Regen" two-way="true" />
     <edge from-id="sassen" to-id="stehe" two-way="true" />
-    <edge from-id="sassen" to-id="stehen" two-way="true" />
+    <edge from-id="wir" to-id="zusammen" two-way="true" />
+    <edge from-id="wir" to-id="einander" two-way="true" />
+    <edge from-id="wir" to-id="Du" two-way="true" />
+    <edge from-id="wir" to-id="einsam" two-way="true" />
+    <edge from-id="einsam" to-id="zusammen" two-way="true" />
+    <edge from-id="einsam" to-id="einander" two-way="true" />
+    <edge from-id="einsam" to-id="Du" two-way="true" />
+    <edge from-id="Du" to-id="ertrinkend" two-way="true" />
+    <edge from-id="Du" to-id="zusammen" two-way="true" />
+    <edge from-id="Du" to-id="einander" two-way="true" />
+    <edge from-id="Du" to-id="schmutzig" two-way="true" />
+    <edge from-id="merkte" to-id="Gesicht" two-way="true" />
+    <edge from-id="schmutzig" to-id="sauberzuspülen" two-way="true" />
+    <edge from-id="schmutzig" to-id="Wasser" two-way="true" />
+    <edge from-id="Wasser" to-id="ertrinkend" two-way="true" />
+    <edge from-id="Wasser" to-id="Regen" two-way="true" />
+    <edge from-id="Wasser" to-id="Wasser2" two-way="true" />
+    <edge from-id="war" to-id="Jetzt" two-way="true" />
+    <edge from-id="Prasselnder" to-id="Donner" two-way="true" />
+    <edge from-id="Prasselnder" to-id="Regen" two-way="true" />
     <edge from-id="stehe" to-id="stehen" two-way="true" />
+    <edge from-id="Strahl" to-id="Wasser2" two-way="true" />
+    <edge from-id="Wasser2" to-id="ertrinkend" two-way="true" />
+    <edge from-id="Donner" to-id="ertrinkend" two-way="true" />
+    <edge from-id="einander" to-id="zusammen" two-way="true" />
   </connections>
 </collage>

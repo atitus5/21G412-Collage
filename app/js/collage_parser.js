@@ -17,18 +17,29 @@
   var popovers = [];
   var hideAllPopovers = function() {
     fadeRestore();
+    $(".popover").popover("hide").attr("popover-open", false);
+    /*
     $.each(popovers, function(idx, el) {
       el.popover("hide");
-    });
+    });*/
     popovers = [];
   };
 
   var openPopover = function() {
     hideAllPopovers();
     $(this).popover("show");
+    $(this).attr("popover-open", true);
     fadeWordsNotConnectedTo($(this).attr("word-id"));
     popovers.push($(this));
   };
+
+  var togglePopover = function() {
+    if ($(this).attr("popover-open")) {
+      hideAllPopovers();
+    } else {
+      openPopover.call(this);
+    }
+  }
 
   var adjacencyList = {};
   var idToView = {};
@@ -58,7 +69,6 @@
     $.each($(".word"), function(idx, word) {
       $word = $(word);
       if ($word.attr("word-id") != id && !adjacencyList[id][$word.attr("word-id")]) {
-        console.log($word.attr("word-id"));
         $word.fadeTo(FADE_TIME, FADE_OPACITY);
       }
     });
@@ -93,8 +103,8 @@
                 placement: "top",
                 trigger: "manual"
               });
-              $wordView.hover(openPopover, function() {});
-              $wordView.click(openPopover);
+              // $wordView.hover(openPopover, function() {});
+              $wordView.click(togglePopover);
               $wordView.addClass("key");
               addNode($wordModel.attr("id"), $wordView);
             }
@@ -117,7 +127,7 @@
   });
 
   var addDiv = function() {
-    $(".jumbotron").click(hideAllPopovers);
+    // $(".jumbotron").click(hideAllPopovers);
     collageDiv.done(function(div) {
       $(div).fadeOut(0);
       $(".collage-container").append(div);
