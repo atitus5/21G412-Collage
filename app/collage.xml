@@ -135,6 +135,7 @@
     <edge from-id="merkte" to-id="Gesicht" two-way="true" />
     <edge from-id="schmutzig" to-id="sauberzuspülen" two-way="true" />
     <edge from-id="schmutzig" to-id="Wasser" two-way="true" />
+    <edge from-id="schmutzig" to-id="frischen" two-way="true" />
     <edge from-id="Wasser" to-id="ertrinkend" two-way="true" />
     <edge from-id="Wasser" to-id="Regen" two-way="true" />
     <edge from-id="Wasser" to-id="Wasser2" two-way="true" />
