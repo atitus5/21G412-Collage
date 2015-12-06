@@ -76,6 +76,7 @@
 
   var collageDiv = new Promise(function(done, reject) {  // Promise to generate collage div
     rawXML.done(function(xml) {
+      var for_load_area = "";
       var $div = $("<div class='collage'>");
       var $xml = $(xml);
       $.each($xml.find("stanza"), function(idx, stanza) {  // For each stanza:
@@ -92,6 +93,7 @@
                                                 .attr("word-id", $wordModel.attr("id"));  // With word ID attribue
             var isKeyword = ($wordModel.attr("key") === "true");  // Determine whether it is a keyword
             if (isKeyword) {  // If it is a keyword:
+              for_load_area += " " + $wordModel.text();
               $wordView.popover({ // Make a popover for it:
                 title: "S. " + $wordModel.attr("page") + " Z. " + $wordModel.attr("line"),  // Title is page/line number
                 content: $wordModel.text(),  // Content is taken from the XML CDATA
@@ -118,15 +120,18 @@
           addEdge($edge.attr("to-id"), $edge.attr("from-id"));
         }
       });
-      done($div);
+      done({ collage: $div, load: for_load_area });
     }, reject);
   });
 
   var addDiv = function() {
-    collageDiv.done(function(div) { // When the collage div is ready...
+    collageDiv.done(function(els) { // When the collage div is ready...
+      var div = els.collage;
+      var load_area = els.load;
       $(div).fadeOut(0);  // make it not visible
       $(".collage-container").append(div);  // Add it
       $(div).fadeIn(2000);  // fade it in
+      $(".load-area").append(load_area);
     }, function(err) {
       console.error(err);
     });

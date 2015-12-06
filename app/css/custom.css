@@ -18,6 +18,10 @@
 
 /* Custom */
 
+.load-area {
+  display: none;
+}
+
 .title-block {
   margin-bottom: 25px;
 }
