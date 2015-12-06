@@ -56,13 +56,13 @@
         <word page="" line="" display="," key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="lass" key="false"></word>
+        <word page="" line="" display="lasse" key="false"></word>
         <word page="" line="" display="den" key="false"></word>
         <word id="Strahl" page="26" line="14" display="Strahl" key="true"><![CDATA[<img src="http://speakman.com/skin/frontend/speakman/enterprise/images/homepage/spray.gif" alt="Speakman showerheads" height="150" width="300">]]></word>
         <word page="" line="" display="von" key="false"></word>
       </line>
       <line>
-        <word id="frischen" page="26" line="13" display="frischen" key="true"><![CDATA[<img src="http://img06.deviantart.net/a74f/i/2015/339/a/0/body_of_water__by_jiyugami-d9j53m6.jpg" alt="\"Body of Water\" by Jiyugami (DeviantArt)" height="150" width="300">]]></word>
+        <word id="frischem" page="26" line="13" display="frischem" key="true"><![CDATA[<img src="http://img06.deviantart.net/a74f/i/2015/339/a/0/body_of_water__by_jiyugami-d9j53m6.jpg" alt="\"Body of Water\" by Jiyugami (DeviantArt)" height="150" width="300">]]></word>
         <word id="Wasser2" page="26" line="13" display="Wasser" key="true"><![CDATA[<img src="http://img00.deviantart.net/bc73/i/2015/339/1/c/the_wind_season_by_myneweyes-d9j4uws.jpg" alt="\"The Wind Season\" by Myneweyes (DeviantArt)" height="150" width="300">]]></word>
         <word page="" line="" display="," key="false"></word>
       </line>
@@ -135,7 +135,7 @@
     <edge from-id="merkte" to-id="Gesicht" two-way="true" />
     <edge from-id="schmutzig" to-id="sauberzuspülen" two-way="true" />
     <edge from-id="schmutzig" to-id="Wasser" two-way="true" />
-    <edge from-id="schmutzig" to-id="frischen" two-way="true" />
+    <edge from-id="schmutzig" to-id="frischem" two-way="true" />
     <edge from-id="Wasser" to-id="ertrinkend" two-way="true" />
     <edge from-id="Wasser" to-id="Regen" two-way="true" />
     <edge from-id="Wasser" to-id="Wasser2" two-way="true" />
