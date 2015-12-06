@@ -50,6 +50,7 @@
                 trigger: "manual"
               });
               $wordView.hover(openPopover, function() {});
+              $wordView.click(openPopover);
               $wordView.addClass("key");
             }
             $lineView.append($wordView);
@@ -64,6 +65,7 @@
   });
 
   var addDiv = function() {
+    $(".jumbotron").click(hideAllPopovers);
     collageDiv.done(function(div) {
       $(div).fadeOut(0);
       $(".collage-container").append(div);
@@ -71,7 +73,6 @@
     }, function(err) {
       console.error(err);
     });
-    $(".jumbotron").click(hideAllPopovers);
   }
 
   // on load:

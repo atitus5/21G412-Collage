@@ -3,7 +3,8 @@
 .jumbotron {
   background: linear-gradient(to bottom right, rgba(128, 128, 128, 0.75), rgba(128, 128, 128, 0.5));
   color: white;
-  max-width: 500px;
+  max-width: 600px;
+  min-width: 400px;
   margin: auto;
 }
 
@@ -25,12 +26,12 @@ body {
   font-family: "Helvetica Neue", "Verdana", "Arial", sans-serif;
   color: #333;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 1em;
   height:100%; 
 }
 
 .word {
-  font-size: 20px;
+  font-size: 2.5em;
   color: #333;
   display: inline;
   background: url('../seamless_paper_texture/seamless_paper_texture.png');
