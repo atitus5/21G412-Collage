@@ -3,12 +3,15 @@
 .jumbotron {
   background: linear-gradient(to bottom right, rgba(128, 128, 128, 0.75), rgba(128, 128, 128, 0.5));
   color: white;
+  max-width: 500px;
+  margin: auto;
 }
 
 /* Template overrides */
 
 .full {
   background: url("../images/brickwall.jpg") no-repeat center center fixed;
+  background-size: 140% 100%;
 }
 
 /* Custom */

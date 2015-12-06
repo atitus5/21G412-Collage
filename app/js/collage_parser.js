@@ -71,6 +71,7 @@
     }, function(err) {
       console.error(err);
     });
+    $(".jumbotron").click(hideAllPopovers);
   }
 
   // on load:
