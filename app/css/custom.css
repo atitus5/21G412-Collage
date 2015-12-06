@@ -6,6 +6,7 @@
   max-width: 600px;
   min-width: 400px;
   margin: auto;
+  padding-top: 10px;
 }
 
 /* Template overrides */
@@ -16,6 +17,22 @@
 }
 
 /* Custom */
+
+.title-block {
+  margin-bottom: 25px;
+}
+
+.title {
+  font-weight: 200;
+  font-size: 3em !important;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-top: 5px;
+  font-weight: 200;
+  font-size: 2em;
+}
 
 html {
   min-height:100%;
