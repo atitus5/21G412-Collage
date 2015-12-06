@@ -1,5 +1,8 @@
 (function() {
 
+  var FADE_TIME = 500;
+  var FADE_OPACITY = 0.4;
+
   var rawXML = new Promise(function(done, reject) {
     $.ajax({
       url: "collage.xml",
@@ -13,6 +16,7 @@
 
   var popovers = [];
   var hideAllPopovers = function() {
+    fadeRestore();
     $.each(popovers, function(idx, el) {
       el.popover("hide");
     });
@@ -22,6 +26,7 @@
   var openPopover = function() {
     hideAllPopovers();
     $(this).popover("show");
+    fadeWordsNotConnectedTo($(this).attr("word-id"));
     popovers.push($(this));
   };
 
@@ -49,6 +54,20 @@
     }
   };
 
+  var fadeWordsNotConnectedTo = function(id) {
+    $.each($(".word"), function(idx, word) {
+      $word = $(word);
+      if ($word.attr("word-id") != id && !adjacencyList[id][$word.attr("word-id")]) {
+        console.log($word.attr("word-id"));
+        $word.fadeTo(FADE_TIME, FADE_OPACITY);
+      }
+    });
+  }
+
+  var fadeRestore = function() {
+    $(".word").fadeTo(FADE_TIME, 1.0);
+  }
+
   var collageDiv = new Promise(function(done, reject) {
     rawXML.done(function(xml) {
       $div = $("<div class='collage'>");
@@ -63,7 +82,8 @@
             $wordModel = $(word);
             $wordView = $("<span class='word'>").text($wordModel.attr("display"))
                                                 .attr("page", $wordModel.attr("page"))
-                                                .attr("line", $wordModel.attr("line"));
+                                                .attr("line", $wordModel.attr("line"))
+                                                .attr("word-id", $wordModel.attr("id"));
             var isKeyword = ($wordModel.attr("key") == "true");
             if (isKeyword) {
               $wordView.popover({ 
