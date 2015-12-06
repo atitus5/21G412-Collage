@@ -99,6 +99,7 @@
               $wordView.popover({ 
                 title: "S. " + $wordModel.attr("page") + " Z. " + $wordModel.attr("line"), 
                 content: $wordModel.text(),
+                container: 'body',
                 html: true,
                 placement: "top",
                 trigger: "manual"

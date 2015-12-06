@@ -59,6 +59,7 @@ body {
 
 .popover {
   color: #333;
+  max-width: none;
 }
 
 .popover-content {
