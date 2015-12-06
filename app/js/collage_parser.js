@@ -17,13 +17,37 @@
       el.popover("hide");
     });
     popovers = [];
-  }
+  };
 
   var openPopover = function() {
     hideAllPopovers();
     $(this).popover("show");
     popovers.push($(this));
-  }
+  };
+
+  var adjacencyList = {};
+  var idToView = {};
+
+  var addEdge = function(from, to) {
+    if (from && to) {
+      if (!idToView[from]) {
+        console.error("Unknown node referenced in edge:  " + from);
+        return;
+      }
+      if (!idToView[to]) {
+        console.error("Unknown node referenced in edge:  " + to);
+        return;
+      }
+      adjacencyList[from][to] = true;
+    }
+  };
+
+  var addNode = function(id, view) {
+    if (id) {
+      idToView[id] = view;
+      adjacencyList[id] = {};
+    }
+  };
 
   var collageDiv = new Promise(function(done, reject) {
     rawXML.done(function(xml) {
@@ -52,6 +76,7 @@
               $wordView.hover(openPopover, function() {});
               $wordView.click(openPopover);
               $wordView.addClass("key");
+              addNode($wordModel.attr("id"), $wordView);
             }
             $lineView.append($wordView);
             $lineView.append(" ");
@@ -59,6 +84,13 @@
           $stanzaView.append($lineView);
         });
         $div.append($stanzaView);
+      });
+      $.each($xml.find("edge"), function(idx, edge) {
+        $edge = $(edge);
+        addEdge($edge.attr("from-id"), $edge.attr("to-id"));
+        if ($edge.attr("two-way") == "true") {
+          addEdge($edge.attr("to-id"), $edge.attr("from-id"));
+        }
       });
       done($div);
     }, reject);

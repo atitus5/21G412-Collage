@@ -5,18 +5,18 @@
       <line>
         <word page="" line="" display="In" key="false"></word>
         <word page="" line="" display="der" key="false"></word>
-        <word id="wanne" page="" line=""  display="Wanne" key="true"><![CDATA[<a href="http://www.google.com">Hallo, Welt!</a>]]></word>
+        <word id="Wanne" page="" line=""  display="Wanne" key="true"><![CDATA[<a href="http://www.google.com">Hallo, Welt!</a>]]></word>
       </line>
       <line>
-        <word page="" line="" display="saßen" key="true"></word>
+        <word id="sassen" page="" line="" display="saßen" key="true"></word>
         <word page="" line="" display="wir" key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="einsam" key="true"></word>
+        <word id="einsam" page="" line="" display="einsam" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="Du" key="true"></word>
+        <word id="Du" page="" line="" display="Du" key="true"></word>
         <word page="" line="" display="mit" key="false"></word>
         <word page="" line="" display="mir" key="false"></word>
         <word page="" line="" display="," key="false"></word>
@@ -29,15 +29,15 @@
       </line>
       <line>
         <word page="" line="" display="Ich" key="false"></word>
-        <word page="" line="" display="merkte" key="true"></word>
+        <word id="merkte" page="" line="" display="merkte" key="true"></word>
         <word page="" line="" display="nicht" key="false"></word>
         <word page="" line="" display="," key="false"></word>
         <word page="" line="" display="wie" key="false"></word>
-        <word page="" line="" display="schmutzig" key="false"></word>
+        <word id="schmutzig" page="" line="" display="schmutzig" key="true"></word>
       </line>
       <line>
         <word page="" line="" display="das" key="false"></word>
-        <word id="wasser" page="" line="" display="Wasser" key="true"></word>
+        <word id="Wasser" page="" line="" display="Wasser" key="true"></word>
         <word page="" line="" display="war" key="false"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
@@ -45,25 +45,25 @@
     <stanza>
       <line>
         <word id="prasselnder" page="" line="" display="Prasselnder" key="true"></word>
-        <word id="regen" page="" line="" display="Regen" key="true"></word>
+        <word id="Regen" page="73" line="24" display="Regen" key="true"></word>
         <word page="" line=""  display="." key="false"></word>
       </line>
       <line>
         <word page="" line="" display="Jetzt" key="true"></word>
-        <word page="" line="" display="stehe" key="true"></word>
+        <word id="stehe" page="" line="" display="stehe" key="true"></word>
         <word page="" line="" display="ich" key="false"></word>
-        <word page="" line="" display="draußen" key="true"></word>
+        <word id="draussen" page="" line="" display="draußen" key="true"></word>
         <word page="" line="" display="," key="false"></word>
       </line>
       <line>
         <word page="" line="" display="lass" key="false"></word>
         <word page="" line="" display="den" key="false"></word>
-        <word page="" line="" display="Strahl" key="true"></word>
+        <word id="Strahl" page="" line="" display="Strahl" key="true"></word>
         <word page="" line="" display="von" key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="frischen" key="true"></word>
-        <word page="" line="" display="Wasser" key="true"></word>
+        <word id="frischen" page="" line="" display="frischen" key="true"></word>
+        <word id="Wasser2" page="" line="" display="Wasser" key="true"></word>
         <word page="" line="" display="," key="false"></word>
       </line>
       <line>
@@ -86,14 +86,14 @@
     </stanza>
     <stanza>
       <line>
-        <word id="donner" page="" line="" display="Donner" key="true"></word>
+        <word id="Donner" page="" line="" display="Donner" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
       <line>
         <word page="" line="" display="Wir" key="false"></word>
-        <word page="" line="" display="stehen" key="false"></word>
+        <word id="stehen" page="" line="" display="stehen" key="true"></word>
         <word page="" line="" display="bei" key="false"></word>
-        <word page="" line="" display="einander" key="false"></word>
+        <word id="einander" page="" line="" display="einander" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
       <line>
@@ -109,13 +109,19 @@
         <word page="" line="" display="," key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="zusammen" key="true"></word>
+        <word id="zusammen" page="" line="" display="zusammen" key="true"></word>
         <word id="ertrinkend" page="" line="" display="ertrinkend" key="true"></word>
         <word page="" line="" display="." key="false"></word>
       </line>
     </stanza>
   </content>
   <connections>
-    <edge from-id="wasser" to-id="wanne" two-way="true" />
+    <edge from-id="Wasser" to-id="Wanne" two-way="true" />
+    <edge from-id="Wasser" to-id="Regen" two-way="true" />
+    <edge from-id="Regen" to-id="Donner" two-way="true" />
+    <edge from-id="Wasser" to-id="Wasser2" two-way="true" />
+    <edge from-id="sassen" to-id="stehe" two-way="true" />
+    <edge from-id="sassen" to-id="stehen" two-way="true" />
+    <edge from-id="stehe" to-id="stehen" two-way="true" />
   </connections>
 </collage>
