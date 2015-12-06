@@ -18,7 +18,8 @@
 
   var hideAllPopovers = function() {  // Hides all popovers
     fadeRestore();  // Restore all words to default opacity
-    $(".popover").attr("popover-open", "false").popover("hide");  // Hide the popovers
+    $(".popover").popover("hide");  // Hide the popovers
+    $(".word").attr("popover-open", "false"); // Register that the popovers for all words are closed
   };
 
   var openPopover = function() {  // Open popover.  "this" is the <span class="word"> element
