@@ -64,13 +64,11 @@
       <line>
         <word id="frischem" page="26" line="13" display="frischem" key="true"><![CDATA[<img src="http://img06.deviantart.net/a74f/i/2015/339/a/0/body_of_water__by_jiyugami-d9j53m6.jpg" alt="\"Body of Water\" by Jiyugami (DeviantArt)" height="150" width="300">]]></word>
         <word id="Wasser2" page="26" line="13" display="Wasser" key="true"><![CDATA[<img src="http://img00.deviantart.net/bc73/i/2015/339/1/c/the_wind_season_by_myneweyes-d9j4uws.jpg" alt="\"The Wind Season\" by Myneweyes (DeviantArt)" height="150" width="300">]]></word>
-        <word page="" line="" display="," key="false"></word>
       </line>
       <line>
-        <word page="" line="" display="um" key="false"></word>
         <word page="" line="" display="mein" key="false"></word>
         <word id="Gesicht" page="26" line="14" display="Gesicht" key="true"><![CDATA[<img src="http://images3.static-bluray.com/reviews/1294_1.jpg" alt="Michaels Gesicht (The Reader, 2008)" height="150" width="300">]]></word>
-        <word id="sauberzuspülen" page="26" line="14" display="sauberzuspülen" key="true"><![CDATA[<img src="http://orig02.deviantart.net/22bc/f/2007/229/3/a/clean_i_by_heatherhorton.jpg" alt="\"Clean I\" by HeatherHorton (DeviantArt)" height="300" width="300">]]></word>
+        <word id="sauberspülen" page="26" line="14" display="sauberspülen" key="true"><![CDATA[<img src="http://orig02.deviantart.net/22bc/f/2007/229/3/a/clean_i_by_heatherhorton.jpg" alt="\"Clean I\" by HeatherHorton (DeviantArt)" height="300" width="300">]]></word>
         <word page="" line="" display="." key="false"></word>
       </line>
       <line>
@@ -134,7 +132,7 @@
     <edge from-id="Du" to-id="einander" two-way="true" />
     <edge from-id="Du" to-id="schmutzig" two-way="true" />
     <edge from-id="merkte" to-id="Gesicht" two-way="true" />
-    <edge from-id="schmutzig" to-id="sauberzuspülen" two-way="true" />
+    <edge from-id="schmutzig" to-id="sauberspülen" two-way="true" />
     <edge from-id="schmutzig" to-id="Wasser" two-way="true" />
     <edge from-id="schmutzig" to-id="frischem" two-way="true" />
     <edge from-id="Wasser" to-id="ertrinkend" two-way="true" />
